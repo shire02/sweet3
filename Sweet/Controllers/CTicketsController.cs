@@ -11,7 +11,7 @@ using Sweet.Models;
 namespace Sweet.Controllers
 {
     public class CTicketsController : Controller
-    {//database
+    {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: CTickets
