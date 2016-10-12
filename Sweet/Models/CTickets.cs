@@ -9,7 +9,6 @@ namespace Sweet.Models
     {
         [Key]
         public int Id { get; set; }
-        //user
         [Required(ErrorMessage = "Please enter your user name ")]
         public string UserName { get; set; }
 
