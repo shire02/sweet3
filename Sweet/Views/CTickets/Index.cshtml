@@ -4,11 +4,25 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .right{
+     position: absolute;
+     right: 100px;
+    }
+</style>
 
 <h3> Tickets </h3> 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="right">
+    @using (Html.BeginForm("Index", "CTickets", FormMethod.Get))
+    {
+        <b>Search By: UserName or Email </b>  <br />
+         @Html.TextBox("search")<input type="submit" value="Search" />
+    }
+</div>
+
 <table class="table">
     <tr>
         <th>

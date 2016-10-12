@@ -12,33 +12,28 @@ namespace Sweet.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: List
-       public ActionResult Index()
+        public ActionResult Index()
         {
-           return View();
+            return View();
         }
-        [Authorize (Users ="henok_afro@yahoo.com")]
-        public ActionResult List(string Filter, string searchString, int? page)
+        [Authorize(Users = "henok_afro@yahoo.com")]
+        public ActionResult List(string searchBy, string search)
         {
 
-            if (searchString != null)
-            {
-                page = 1;
-            }
-            else
-            {
-                searchString = Filter;
-            }
-
-            ViewBag.CurrentFilter = searchString;
-
-            var tickets = from t in db.NewTickets
-                           select t;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                 tickets= tickets.Where(t => t.Email.Contains(searchString)
-                                       || t.UserName.Contains(searchString));
-            }
             return View(db.NewTickets.ToList());
+
+
+
+        //    if (searchBy == "Status")
+          //  {
+               // return View(db.NewTickets.Where(x => x.Status == 0 || search == null).ToList());
+           // }
+            //else
+           // {
+           //     return View(db.NewTickets.Where(x => x.Status = "Close Ticket").ToList());
+           // }
+           
+
 
         }
     }

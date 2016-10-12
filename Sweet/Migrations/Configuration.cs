@@ -9,7 +9,7 @@ namespace Sweet.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Sweet.Models.ApplicationDbContext";
         }
 

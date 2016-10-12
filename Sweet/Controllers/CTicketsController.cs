@@ -15,10 +15,19 @@ namespace Sweet.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: CTickets
-        public ActionResult Index()
+        public ActionResult Index(string searchBy, string search)
         {
             ModelState.Clear();
-            return View(db.NewTickets.ToList());
+
+            if (searchBy == "UserName")
+            {
+                return View(db.NewTickets.Where(x => x.UserName == search||search==null).ToList());
+            }
+            else
+            {
+                return View(db.NewTickets.Where(x => x.Email.StartsWith(search) || search == null).ToList());
+            }
+
         }
 
         // GET: CTickets/Details/5

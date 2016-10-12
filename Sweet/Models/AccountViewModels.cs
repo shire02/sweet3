@@ -64,6 +64,16 @@ namespace Sweet.Models
 
     public class RegisterViewModel
     {
+        //[Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+        [Required]
+        
+        [Display(Name = "User Name")]
+        public string UserName { get; set; }
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

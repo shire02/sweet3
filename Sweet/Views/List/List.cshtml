@@ -4,26 +4,29 @@
     ViewBag.Title = "List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>
+    .right{
 
-@using (Html.BeginForm())
-{
-    <p>
-        Find by Email: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
-    </p>
-}
+     position: absolute;
+     right: 100px;
+     }
+</style>
+
+    <div class="right ">
+        @using(Html.BeginForm("Index","List", FormMethod.Get))
+        {
+          <b>View Tickets:</b>  <br />
+
+        @Html.RadioButton("SearchBy", "status")<text> Open Ticket</text>
+        @Html.RadioButton("SearchBy", "status")<text> Colse Ticket</text><br />
+        }
+    </div>
+
 
 <h3>List of  Tickets </h3>
-<p>
-    @Html.ActionLink("Open Ticket", " " )
-    <br />
 
-    @Html.ActionLink("Close Ticket", "" )
-    <br />
     @Html.ActionLink("Creat Appointment ", "Index", "Appoint", routeValues: null, htmlAttributes: new { id = "IndexLink" })
 
-
-</p>
 <table class="table">
     <tr>
         <th>
