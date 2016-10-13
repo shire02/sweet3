@@ -10,8 +10,9 @@ namespace Sweet.Models
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "Please enter your user name ")]
+
         public string UserName { get; set; }
-        //jjj
+
         [Required(ErrorMessage = "Please enter your Email ")]
         [DataType(DataType.EmailAddress, ErrorMessage = "wrong email")]
         public string Email { get; set; }

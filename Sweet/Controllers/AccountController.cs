@@ -153,7 +153,7 @@ namespace Sweet.Controllers
             {
                 var user = new ApplicationUser()
                 {
-                    Name = model.Name,
+                    FullName = model.FullName,
                     Address = model.Address,
                     Email = model.Email,
                     UserName = model.Email

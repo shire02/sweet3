@@ -1,5 +1,8 @@
 namespace Sweet.Migrations
 {
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -13,7 +16,7 @@ namespace Sweet.Migrations
             ContextKey = "Sweet.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(Sweet.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
