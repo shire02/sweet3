@@ -10,6 +10,7 @@ using Sweet.Models;
 
 namespace Sweet.Controllers
 {
+    [Authorize]
     public class CTicketsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

@@ -23,16 +23,15 @@ namespace Sweet.Controllers
             return View(db.NewTickets.ToList());
 
 
-
-        //    if (searchBy == "Status")
-          //  {
-               // return View(db.NewTickets.Where(x => x.Status == 0 || search == null).ToList());
-           // }
+            //    if (searchBy == "Status")
+            //  {
+            // return View(db.NewTickets.Where(x => x.Status == 0 || search == null).ToList());
+            // }
             //else
-           // {
-           //     return View(db.NewTickets.Where(x => x.Status = "Close Ticket").ToList());
-           // }
-           
+            // {
+            //     return View(db.NewTickets.Where(x => x.Status = "Close Ticket").ToList());
+            // }
+
 
 
         }
