@@ -32,6 +32,14 @@
         .navbar-toggle{
             color:black;
         }
+        .nav-pills {
+            background-color: black;
+            height: 50px;
+            color: white;
+            -moz-column-count: 3; /* Firefox */
+            column-count: 3;
+        }
+        
                 
     </style>
 </head>
@@ -68,9 +76,23 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Ticketing System</p>
-        </footer>
+            <nav class="nav-pills navbar-inverse navbar-fixed-bottom ">
+                
+
+                    <a href="#">Home </a>
+                    <br />
+                    <a href="#">Jobs </a>
+                    <br />
+                    <a href="#">Index </a>
+                    <br />
+                    <a href="#">Archive  </a>
+
+                    <p>&copy; @DateTime.Now.Year - Ticketing System</p>
+                   
+</nav>
+</footer>
     </div>
+    
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
