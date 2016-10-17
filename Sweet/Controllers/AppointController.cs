@@ -19,7 +19,7 @@ namespace Sweet.Controllers
         {
             return View(db.UserAppointment.ToList());
         }
-
+       
         // GET: Appoint/Details/5
         public ActionResult Details(int? id)
         {
