@@ -15,10 +15,22 @@ namespace Sweet.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Appoint
-        public ActionResult Index()
+        public ActionResult Index(string searchBy, string search)
+
         {
-            return View(db.UserAppointment.ToList());
-        }
+              ModelState.Clear();
+
+                if (searchBy == "Date")
+                {
+                    return View(db.UserAppointment.Where(x => x.Date == search || search == null).ToList());
+               }
+                else
+                {
+                   return View(db.UserAppointment.Where(x => x.UserName.StartsWith(search) || search == null).ToList());
+                }
+
+                // return View(db.UserAppointment.ToList());
+            }
        public ActionResult Message()
         {
             return View(db.UserAppointment.ToList());

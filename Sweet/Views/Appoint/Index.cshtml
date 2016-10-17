@@ -10,6 +10,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<div class="left">
+    @using (Html.BeginForm("Index", "Appoint", FormMethod.Get))
+    {
+        <b>Search By: UserName or Date </b>  <br />
+        @Html.TextBox("search")<input type="submit" value="Search" />
+    }
+</div>
 <table class="table">
     <tr>
         <th>
