@@ -25,7 +25,9 @@
 
 <h3>List of  Tickets </h3>
 
-    @Html.ActionLink("Creat Appointment ", "Index", "Appoint", routeValues: null, htmlAttributes: new { id = "IndexLink" })
+    @Html.ActionLink("Create Appointment ", "Create", "Appoint", routeValues: null, htmlAttributes: new { id = "IndexLink" })||
+    @Html.ActionLink("View Appointment ", "Index", "Appoint", routeValues: null, htmlAttributes: new { id = "IndexLink" })
+
 
 <table class="table">
     <tr>
@@ -71,11 +73,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
+            
         </tr>
     }
 
